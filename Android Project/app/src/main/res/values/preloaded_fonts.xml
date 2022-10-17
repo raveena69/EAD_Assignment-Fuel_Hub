@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/average_sans</item>
         <item>@font/averia_libre_light</item>
+        <item>@font/boogaloo</item>
+        <item>@font/comfortaa_light</item>
         <item>@font/fredoka_one</item>
+        <item>@font/lilita_one</item>
         <item>@font/passion_one</item>
+        <item>@font/patua_one</item>
     </array>
 </resources>
