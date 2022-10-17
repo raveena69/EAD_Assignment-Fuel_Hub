@@ -8,7 +8,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.EADAssignmentFuelHub">
-
+        <activity
+            android:name=".stationOwner.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stationOwner.StationOwnerDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".stationOwner.RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">
