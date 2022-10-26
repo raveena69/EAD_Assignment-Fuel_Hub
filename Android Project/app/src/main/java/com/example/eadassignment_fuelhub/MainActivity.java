@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
         stationOwnerLoginbutton = findViewById(R.id.stationOwnerLoginbutton);
         stationOwnerLoginbutton.setOnClickListener(new View.OnClickListener() {
             @Override

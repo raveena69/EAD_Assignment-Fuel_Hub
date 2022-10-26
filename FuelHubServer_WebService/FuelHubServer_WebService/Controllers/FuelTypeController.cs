@@ -26,7 +26,7 @@ namespace FuelHubServer_WebService.Controllers
             return new JsonResult(dbList);
         }
 
-        [HttpPost]
+        [HttpPost("add/")]
         public JsonResult Post(FuelType fuelType)
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("FuelTypeAppCon"));
@@ -39,7 +39,7 @@ namespace FuelHubServer_WebService.Controllers
             return new JsonResult("Added Successfully");
         }
 
-        [HttpPut]
+        [HttpPut("update/")]
         public JsonResult Put(FuelType fuelType)
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("FuelTypeAppCon"));
@@ -77,7 +77,7 @@ namespace FuelHubServer_WebService.Controllers
         }
 
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public JsonResult Delete(int id)
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("FuelTypeAppCon"));

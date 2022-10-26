@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,9 @@ public class StationOwnerDashboardActivity extends AppCompatActivity {
     Animation atg, atgtwo, atgthree;
     ImageView imageView3;
 
+    LinearLayout fueltype;
+    ImageView fueltype1;
+
     // button for logout
     private ImageView log_out;
 
@@ -32,6 +36,7 @@ public class StationOwnerDashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_owner_dashboard);
 
+        getSupportActionBar().hide();
         nameuser = findViewById(R.id.nameuser);
         String emailfromIntent = getIntent().getStringExtra("EMAIL");
         nameuser.setText(emailfromIntent);
@@ -46,8 +51,8 @@ public class StationOwnerDashboardActivity extends AppCompatActivity {
         imageView3 = findViewById(R.id.imageView3);
 
         arrivalTime = findViewById(R.id.arrivalTime);
-        finishTime = findViewById(R.id.finishTime);
-        network = findViewById(R.id.network);
+//        finishTime = findViewById(R.id.finishTime);
+//        network = findViewById(R.id.network);
         plugins = findViewById(R.id.plugins);
         mainmenus = findViewById(R.id.mainmenus);
 
@@ -63,6 +68,30 @@ public class StationOwnerDashboardActivity extends AppCompatActivity {
                 startActivity(a);
             }
         });
+
+        fueltype = findViewById(R.id.fueltype);
+        fueltype.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StationOwnerDashboardActivity.this, FuelTypeDashboardActivity.class));
+            }
+        });
+
+//        fueltype1 = findViewById(R.id.fueltype1);
+//        fueltype1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(StationOwnerDashboardActivity.this, FuelTypeDashboardActivity.class));
+//            }
+//        });
+//
+//        arrivalTime = findViewById(R.id.arrivalTime);
+//        arrivalTime.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(StationOwnerDashboardActivity.this, FuelTypeDashboardActivity.class));
+//            }
+//        });
 
         // pass an animation
         imageView3.startAnimation(atg);
